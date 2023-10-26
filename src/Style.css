@@ -1,6 +1,6 @@
 body
 {
-    background-color: yellow;
+    background-color: rgba(0, 255, 128, 0.616);
 }
 form
 {
@@ -8,4 +8,93 @@ form
     width: 600px;
     margin-top: 10px;
     margin-left: 380px;
+}
+.name-label
+{
+    margin-left: 60px;
+}
+.label-age
+{
+    margin-left: 60px;
+}
+.input-age
+{
+    width: 150px;
+    margin-left: 57px;
+}
+
+.rollno-label
+{
+    margin-left: 20px;
+}
+.rollno-input
+{
+    width: 140px;
+    margin-left: 20px;
+}
+
+.branch-label
+{
+    margin-left: 60px;
+}
+
+.branch-select
+{
+    margin-left: 37px;
+    width: 150px;
+}
+
+.section-label
+{
+    margin-left: 20px;
+}
+
+.section-select
+{
+    margin-left: 20px;
+    width: 135px;
+}
+
+.email-label
+{
+    margin-left: 60px;
+}
+
+.email-input
+{
+    margin-left: 50px;
+    width: 380px;
+}
+
+.phone-label
+{
+    margin-left: 60px;
+}
+
+.code-input
+{
+    margin-left: 13px;
+    width: 100px;
+}
+
+.phone-input
+{
+    margin-left: 20px;
+    width: 255px;
+}
+
+.submit-btn
+{
+    margin-left: 230px;
+}
+
+.name-alert
+{
+    margin-left: 88px;
+}
+
+.lastname-alert
+{
+    margin-left: 290px;
+    margin-top: -25px;
 }
