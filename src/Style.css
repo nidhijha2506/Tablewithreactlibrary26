@@ -9,6 +9,20 @@ form
     margin-top: 10px;
     margin-left: 380px;
 }
+
+td
+{
+    border: 1px solid black;
+}
+th
+{
+    border: 1px solid black;
+}
+
+tr
+{
+    height: 50px;
+}
 .name-label
 {
     margin-left: 60px;
@@ -96,5 +110,58 @@ form
 .lastname-alert
 {
     margin-left: 290px;
-    margin-top: -25px;
+    margin-top: -10px;
 }
+
+.age-alert
+{
+    margin-left: 100px;
+}
+
+.rollno-alert
+{
+    margin-left: 80px;
+}
+
+.branch-alert
+{
+    margin-left: 100px;
+}
+
+.section-alert
+{
+    margin-left: 70px;
+}
+
+.email-alert
+{
+    margin-left: 100px;
+}
+
+.code-alert
+{
+    margin-left: 90px;
+}
+
+.phone-alert
+{
+    margin-left: 250px;
+    margin-top: -5px;
+}
+
+.submit_btn
+{
+    margin-left: 240px;
+}
+
+table
+{
+    margin-left: 320px;
+    font-style: italic;
+}
+
+.reset_button
+{
+    margin-left: 620px;
+}
+
