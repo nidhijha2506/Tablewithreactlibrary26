@@ -146,7 +146,7 @@ tr
 .phone-alert
 {
     margin-left: 250px;
-    margin-top: -5px;
+    margin-top: -4px;
 }
 
 .submit_btn
@@ -156,8 +156,32 @@ tr
 
 table
 {
-    margin-left: 320px;
+    margin-left: 160px;
     font-style: italic;
+}
+
+.name_th
+{
+    width: 130px;
+}
+.email_th
+{
+    width: 200px;
+}
+
+.phone_th
+{
+    width: 180px;
+}
+
+.delete_th
+{
+    width: 90px;
+}
+
+.edit_th
+{
+    width: 90px;
 }
 
 .reset_button
@@ -175,4 +199,9 @@ table
  {
    
   margin-left: 50px;
+ }
+ .update_btn
+ {
+    margin-left: 100px;
+    height: 40px;
  }
