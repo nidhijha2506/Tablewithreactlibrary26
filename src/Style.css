@@ -205,3 +205,52 @@ table
     margin-left: 100px;
     height: 40px;
  }
+ 
+ /* .loader-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.834);
+    z-index: 1;
+} */
+
+.spinner-1 {
+    width: 30px;
+    height: 30px;
+    border: 3px solid;
+    border-color: grey transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
+    margin-top: -80px;
+    margin-left: 500px;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.success-msg
+{
+    margin-left: 80px;
+}
+
+.spinner2 {
+    width: 30px;
+    height: 30px;
+    border: 3px solid;
+    border-color: blue transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
+   margin-left: 420px;
+   margin-top: -70px;
+   
+}
+

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button } from "react-bootstrap";
-//import { Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import "./Style.css";
 import EditButtonModel from "./Editmodal";
 
@@ -29,6 +29,9 @@ export default function App(props) {
   // const handleClose = () => setShow(false);
   //const handleShow = () => setShow(true);
   const [modalShow, setModalShow] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [submittedMsg,setSubmittedMsg]=useState();
+
 
   // useEffect(()=>{
 
@@ -49,9 +52,39 @@ export default function App(props) {
     //data.target.reset();
     console.log(data);
     //setinputdetails(data);
-    setinputdata([...inputdata, data]);
+    
     //setinputdetails({});
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+     
+    function delay(wait) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, wait);
+      });
+    }
+    async function synchronousSetTimeout() {
+
+      setTimeout(() => {
+        setSubmittedMsg("Your form submitted successfully")
+      }, 2000);
+
+      setTimeout(() => {
+        setSubmittedMsg("")
+      }, 4000);
+      
+    await delay(4000);
+
+    setinputdata([...inputdata, data]);
+    
+   
+    
+    
     reset();
+  }
+
+  synchronousSetTimeout();
   }
 
   function editTable(index)
@@ -105,7 +138,7 @@ export default function App(props) {
             required: "First name is required",
             maxLength: 20, pattern: {
               value: /^[A-Za-z]+$/i,
-              message: "only starts with letter"
+              message: "only letters are allowed"
             }
           })}
             aria-invalid={errors.firstName ? "true" : "false"} />&nbsp;&nbsp;
@@ -189,7 +222,13 @@ export default function App(props) {
 
         <Button type="submit" className=" bg-primary fs-5 w-25 h5 fw-bold h-25 submit_btn" >Submit</Button><br /><br />
         {/* <input type="submit" className=" bg-primary w-25 h5 fw-bold h-25 submit_btn" /><br /><br /> */}
+        {loading ? ( <div className="spinner2">
+        </div>
+      ) : (
+        <h4 className="text-success bg-muted h-25 my-4 fs-5 text-center">{submittedMsg}</h4>
+      )}<br></br>
       </form><br /><br />
+      
 
       <table cellPadding={10} cellSpacing={0} border={1} className="bg-secondary text-center">
         <thead>

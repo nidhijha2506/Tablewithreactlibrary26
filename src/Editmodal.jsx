@@ -38,10 +38,18 @@ const EditButtonModel = ({ closeModel, tabledata, showw, hideModal }) => {
 
 
   const [successMsg,setSucessMsg]=useState();
+  const [loading, setLoading] = useState(false);
+
   const onSubmit = (data) => {
 
 
     console.log("tabledata", data);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    console.log('loading',loading);
     
     //event.preventDefault();
     function delay(wait) {
@@ -53,7 +61,7 @@ const EditButtonModel = ({ closeModel, tabledata, showw, hideModal }) => {
 
       setTimeout(() => {
         setSucessMsg("Your form updated successfully")
-      }, 2000);
+      }, 3000);
       
     await delay(4000);
 
@@ -67,7 +75,7 @@ const EditButtonModel = ({ closeModel, tabledata, showw, hideModal }) => {
     tabledata.code = data.code;
     tabledata.phone = data.phone;
 
-    //localStorage.setItem('tableData', JSON.stringify(tabledata));
+    //localStorage.setItem('tableData', JSON.stringify(data));
 
     console.log('End');
     hideModal();
@@ -203,7 +211,11 @@ synchronousSetTimeout();
             </label><br /><br /><br />
             <button className="bg-success text-white  fs-5 w-25 rounded update_btn">Update</button>
           </form><br /><br />
-          <h3 className="text-success bg-muted h-25 fs-4 text-center">{successMsg}</h3>
+          {loading ? ( <div className="spinner-1">
+        </div>
+      ) : (
+          <h3 className="text-success bg-muted h-25 my-4 fs-4 text-center">{successMsg}</h3>)}
+          
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => hideModal()}>
